@@ -1,0 +1,70 @@
+/* yonunu degıstırebılırsın ,tersten yapabılırsın */
+    /* flex-direction: column; */
+    /* flex-direction: row-reverse */
+
+.all {
+    background-color: dimgrey;
+    display: flex;
+    /* sona gore hızala  başagore hızala*/
+    /* align-items: flex-end;
+    align-items: flex-start; */
+    /* align-items: center; */
+
+    /* --------------------- */
+    /* bu ozellık flex-basis ozellıgını verınce yazarsın. ve boşlugu soldan mı sagdan mı yapacaksın yoksa oratlayacak mısın bu skeılde verırsın. */
+    /* justify-content: flex-end; */
+    justify-content: center; 
+}
+
+
+/* flex:2 vs ozellıgı kac alan kaplayacagını soyluyoruz 2 1 1 kaplasınlar dedık */
+/* order:1 2 3 vs sıralamasını ayarlar */
+.ayni {
+    padding: 20px;
+    margin: 20px;
+    border: 2px solid black;
+    /* hepsine oto olarak 50px ver diyoruz yayılmasında belırlı bır width i olsun..Bunu verırsen flex:2 ozellıklerını kaldırman gerek asagıdakı gıbı */
+    flex-basis: 50px;
+}
+
+.r1 {
+    background-color: aqua;
+    /* flex: 3; */
+    order: 1;
+    /* *********************************************** */
+    /* bu ozellık  herbırınde aynı olan class'a flex-basis ile standart width verdıgımızde biraz boşluk kalıyor: Bu boşlugu ıster sola ıster saga ıster yanlara atabılmeyı justify-content ozellıgı saglıyor ve bu ozellıgı ıse hepsinin parentı olan elemente vermen gerek: 
+    flex-grow ise istedıgın ıtemı yanı ıstedıgı coloumbu buyutmeye yarıyor */
+    flex-grow: 1;
+    /* flex-shrink:  => flex-grow un tam tersı */
+}
+
+.r2 {
+    background-color: red;
+    /* flex: 3; */
+    order: 2;
+    /* flex-grow: 2; */
+}
+
+.r3 {
+    background-color: rebeccapurple;
+    /* flex: 3; */
+    order: 4
+}
+
+.r4 {
+    background-color: blue;
+    /* flex: 3; */
+    order: 6
+}
+
+/* Kucultup buyuttugunde alta felan ınsın */
+@media(max-width:760px){
+    /* .r3 {
+        
+        order: 0;
+        flex: 4;
+    } */
+    .all{
+        flex-direction: column;
+    }
+}
